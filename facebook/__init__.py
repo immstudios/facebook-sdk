@@ -136,7 +136,7 @@ class GraphAPI(object):
         args["type"] = type
         return self.request(self.version + "/search/", args)
 
-    def get_connections(self, id, connection_name, **args):
+    def get_connections(self, id, connection_name="", **args):
         """Fetches the connections for given object."""
         return self.request(
             "{0}/{1}/{2}".format(self.version, id, connection_name), args)
